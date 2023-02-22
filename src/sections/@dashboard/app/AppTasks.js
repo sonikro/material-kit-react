@@ -40,7 +40,7 @@ export default function AppTasks({ title, subheader, list, ...other }) {
         control={control}
         render={({ field }) => {
           const onSelected = (task) =>
-            field.value.includes(task) ? field.value.filter((value) => value === task) : [...field.value, task];
+            field.value.includes(task) ? field.value.filter((value) => value !== task) : [...field.value, task];
 
           return (
             <>
